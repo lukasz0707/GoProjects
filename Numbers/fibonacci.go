@@ -6,12 +6,12 @@ import (
 )
 
 // Performant big fibonacci n-th number sequential approach
-func fibonacci(n uint) *big.Int {
+func fibonacci(n int) *big.Int {
 	if n <= 1 {
 		return big.NewInt(int64(n))
 	}
 	var p, q = big.NewInt(0), big.NewInt(1)
-	for i := uint(1); i < n; i++ {
+	for i := 1; i < n; i++ {
 		p.Add(p, q)
 		q, p = p, q
 	}
@@ -22,5 +22,5 @@ func fibonacci(n uint) *big.Int {
 // If you want the output to go into a file try:
 // go run fibonnaci.go > filename.txt
 func main() {
-	fmt.Println(fibonacci(5))
+	fmt.Println(fibonacci(100))
 }
