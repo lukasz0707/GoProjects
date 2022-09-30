@@ -6,7 +6,7 @@ import (
 )
 
 // Check if number is prime
-func is_prime(n int) bool {
+func isPrime(n int) bool {
 	if n < 2 {
 		return false
 	}
@@ -19,8 +19,8 @@ func is_prime(n int) bool {
 }
 
 func main() {
-	//test is_prime
+	//test isPrime
 	for i := 0; i < 32; i++ {
-		fmt.Printf("%d: %v\n", i, is_prime(i))
+		fmt.Printf("%d: %v\n", i, isPrime(i))
 	}
 }
